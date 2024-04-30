@@ -22,6 +22,7 @@ jobs:
         os: [ubuntu-latest, macos-latest]
         gcc_v: [10, 11, 12, 13] # Version of GFortran we want to use.
         build: [cmake]
+        arch: [x64]  
         include:
           - os: ubuntu-latest
             gcc_v: 10
