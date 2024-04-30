@@ -58,9 +58,11 @@ jobs:
 
     - name: Install GCC compilers macOS
       if: contains( matrix.os, 'macos')
-      run: |
-          brew install gcc@${GCC_V} || brew upgrade gcc@${GCC_V} || true
-          brew link gcc@${GCC_V}
+      uses: fortran-lang/setup-fortran@v1
+      id: setup-fortran
+      with:
+        compiler: gcc 
+        version: ${GCC_V}
 
     - name: Configure with CMake
       if: ${{ contains(matrix.build, 'cmake') }}
