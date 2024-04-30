@@ -62,7 +62,7 @@ jobs:
       id: setup-fortran
       with:
         compiler: gcc 
-        version: ${GCC_V}
+        version: ${{ matrix.gcc_v }}
 
     - name: Configure with CMake
       if: ${{ contains(matrix.build, 'cmake') }}
