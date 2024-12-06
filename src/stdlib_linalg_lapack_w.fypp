@@ -6,9 +6,8 @@ module stdlib_linalg_lapack_${ci}$
      use stdlib_linalg_constants
      use stdlib_linalg_blas
      use stdlib_linalg_lapack_aux
-     use stdlib_linalg_lapack_d, only: stdlib_dlamch
      #:for rk,rt,ri in RC_KINDS_TYPES
-     #:if not ri in ["s","c","y","w"]     
+     #:if not ri in ["s","c","y","w","d"]     
      use stdlib_linalg_lapack_${ri}$
      #:endif
      #:endfor
