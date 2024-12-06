@@ -3,8 +3,8 @@ module stdlib_linalg_lapack_z
      use stdlib_linalg_constants
      use stdlib_linalg_blas
      use stdlib_linalg_lapack_aux
-     use stdlib_linalg_lapack_s
-     use stdlib_linalg_lapack_c
+     use stdlib_linalg_lapack_s, only: stdlib_slamch
+     use stdlib_linalg_lapack_c, only: stdlib_cpotrf,stdlib_cpotrs,stdlib_clag2z,stdlib_cgetrf,stdlib_cgetrs
      use stdlib_linalg_lapack_d
      implicit none(type,external)
      private

@@ -4,15 +4,6 @@
 module stdlib_linalg_blas_${ci}$
      use stdlib_linalg_constants
      use stdlib_linalg_blas_aux
-     use stdlib_linalg_blas_s
-     use stdlib_linalg_blas_c
-     use stdlib_linalg_blas_d
-     use stdlib_linalg_blas_z
-     #:for rk,rt,ri in REAL_KINDS_TYPES
-     #:if not rk in ["sp","dp"]
-     use stdlib_linalg_blas_${ri}$
-     #:endif
-     #:endfor
      implicit none(type,external)
      private
 
